@@ -57,11 +57,14 @@ sub new {
 
 sub _create {
 	my($self, $filename) = @_;
-	
+
 	return unless length($filename) > 4;
 
 	(my $type = $filename) =~ s/.*\.//;
 	$type = ucfirst lc $type;
+	if ($type eq "Aac" || $type eq "M4a") {
+	    $type = "Mp4";
+	}
 	return unless $type;
 
 	my $loaded = 0;
