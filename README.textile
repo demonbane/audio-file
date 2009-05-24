@@ -13,3 +13,8 @@ Standard perldoc documentation is provided in the module:
 h3. History
 
 This is a fork of Florian Ragwitz's original Audio::File module. The upstream author has apparently abandoned both the module and the Debian package for which he is the maintainer, so I have taken over maintaing this unofficial fork.
+
+h3. Links
+
+Homepage: http://wiki.github.com/demonbane/audio-file
+Original upstream: http://search.cpan.org/~flora/Audio-File-0.11/
