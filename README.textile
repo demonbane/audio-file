@@ -1,0 +1,15 @@
+h2. Description
+
+Audio::File abstracts a single audio file, independant of its format. Using this module you can access a file's meta-info like title, album, etc. as well as the file's audio properties like its length and bitrate.
+
+Currently supported formats are: FLAC, Ogg Vorbis, MP3, and MP4, but support for other formats may be easily added.
+
+h3. Documentation
+
+Standard perldoc documentation is provided in the module:
+
+@perldoc Audio::file@
+
+h3. History
+
+This is a fork of Florian Ragwitz's original Audio::File module. The upstream author has apparently abandoned both the module and the Debian package for which he is the maintainer, so I have taken over maintaing this unofficial fork.
