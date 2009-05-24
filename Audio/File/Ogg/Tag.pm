@@ -17,7 +17,8 @@ sub init {
 	$self->comment(	$self->{ogg}->comment('comment')		);
 	$self->genre(	$self->{ogg}->comment('genre')			);
 	$self->year(	$self->{ogg}->comment('date')			);
-	$self->track(	$self->{ogg}->comment('tracknumber')	);
+	$self->track(	$self->{ogg}->comment('tracknumber')    	);
+	$self->disc(    $self->{ogg}->comment('discnumber')             );
 	$self->total(	$self->{ogg}->comment('tracktotal')		);
 
 	return 1;

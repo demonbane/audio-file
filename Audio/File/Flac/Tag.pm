@@ -15,11 +15,12 @@ sub init {
 	$self->title(	$flactag->{TITLE}		);
 	$self->artist(	$flactag->{ARTIST}		);
 	$self->album(	$flactag->{ALBUM}		);
-	$self->comment(	$flactag->{DESCRIPTION}	);
+	$self->comment(	$flactag->{DESCRIPTION}	        );
 	$self->genre(	$flactag->{GENRE}		);
 	$self->year(	$flactag->{DATE}		);
-	$self->track(	$flactag->{TRACKNUMBER}	);
-	$self->total(	$flactag->{TRACKTOTAL}	);
+	$self->track(	$flactag->{TRACKNUMBER}	        );
+	$self->disc(    $flactag->{DISCNUMBER}          );
+	$self->total(	$flactag->{TRACKTOTAL}	        );
 
 	return 1;
 }

@@ -25,6 +25,25 @@ sub init {
 	$self->track  (	substr($track, 0, $pos)  );
 	$self->total  (	substr($track, $pos + 1) );
 
+	if (exists $self->{mp3}->{ID3v2}) {
+	  my $disctag = 0;
+	  if ($self->{mp3}->{ID3v2}->get_frame("TPA")) {
+	    $disctag = $self->{mp3}->{ID3v2}->get_frame("TPA");
+	  }elsif ($self->{mp3}->{ID3v2}->get_frame("TPOS")) {
+	    $disctag = $self->{mp3}->{ID3v2}->get_frame("TPOS");
+	  }else {
+	    return 1;
+	  }
+	  my $disctotal = 0;
+	  my $disc = 0;
+	  if ($disctag =~ /\//) {
+	    ($disc, $disctotal) = split(/\//,$disctag,2);
+	  }else {
+	    $disc = $disctag;
+	  }
+	  $self->disc ( $disc );
+	}
+
 	return 1;
 }
 

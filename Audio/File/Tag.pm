@@ -50,8 +50,8 @@ sub init {
 Using title() you can get or set the tags title field. If called without any
 argument it'll return the current content of the title field. If you call
 title() with an scalar argument it will set the title field to what the argument
-contains. The methods artist(), album(), comment(), genre(), year(), track() and total()
-are called in the same way.
+contains. The methods artist(), album(), comment(), genre(), year(), track(), disc()
+and total() are called in the same way.
 
 =cut
 
@@ -158,8 +158,23 @@ sub track {
 		$self->{track} = shift;
 		return 1;
 	}
-	
 	return $self->{track} + 0;
+}
+
+=head2 disc
+
+Set/get the disc field in the files tag.
+
+=cut
+
+sub disc {
+	my $self = shift;
+	if ( @_ ) {
+		$self->{disc} = shift;
+		return 1;
+	}
+
+	return $self->{disc};
 
 }
 
@@ -204,6 +219,7 @@ sub all {
 		genre	=> $self->genre(),
 		year	=> $self->year(),
 		track	=> $self->track(),
+		disc    => $self->disc(),
 		total	=> $self->total()
 	};
 }
@@ -223,6 +239,7 @@ sub is_empty {
 			$self->genre() &&
 			$self->year() &&
 			$self->track() &&
+		        $self->disc() &&
 			$self->total());
 }
 
