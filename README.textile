@@ -4,6 +4,25 @@ Audio::File abstracts a single audio file, independant of its format. Using this
 
 Currently supported formats are: FLAC, Ogg Vorbis, MP3, and MP4, but support for other formats may be easily added.
 
+h3. Installation
+
+To install this module type the following:
+
+@perl Makefile.PL
+make
+make test
+make install@
+
+h3. Dependencies
+
+This module requires these other modules and libraries:
+
+  Audio::FLAC
+  Ogg::Vorbis::Header::PurePerl
+  MP3::Tag
+  MP3::Info
+  MP4::Info
+
 h3. Documentation
 
 Standard perldoc documentation is provided in the module:
@@ -13,6 +32,10 @@ Standard perldoc documentation is provided in the module:
 h3. History
 
 This is a fork of Florian Ragwitz's original Audio::File module. The upstream author has apparently abandoned both the module and the Debian package for which he is the maintainer, so I have taken over maintaing this unofficial fork.
+
+h3. Copyright
+
+This version of Audio::File is copyright (c) 2009 by Alex Malinovich.
 
 h3. Links
 
