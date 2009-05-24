@@ -190,8 +190,9 @@ sub total {
 		$self->{total} = shift;
 		return 1;
 	}
-
-	return $self->{total} + 0;
+	my $total = $self->{total};
+	$total = 0 if $total eq "";
+	return $total + 0;
 }
 
 =head2 all

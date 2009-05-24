@@ -16,13 +16,15 @@ sub init {
 	my $track = $info->{track};
 	my $pos = index($track, '/');
 
+	$track = substr($track, 0, $pos) if ($pos != -1);
+
 	$self->title  (	$info->{ title   } );
 	$self->artist (	$info->{ artist  } );
 	$self->album  (	$info->{ album   } );
 	$self->comment(	$info->{ comment } );
 	$self->genre  (	$info->{ genre   } );
 	$self->year   (	$info->{ year    } );
-	$self->track  (	substr($track, 0, $pos)  );
+	$self->track  (	$track             );
 	$self->total  (	substr($track, $pos + 1) );
 
 	if (exists $self->{mp3}->{ID3v2}) {
