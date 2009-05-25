@@ -15,8 +15,12 @@ sub init {
 	my $info = $self->{mp3}->autoinfo;
 	my $track = $info->{track};
 	my $pos = index($track, '/');
+	my $total = "";
 
-	$track = substr($track, 0, $pos) if ($pos != -1);
+	unless ($pos == -1) {
+	  $total = substr($track, $pos + 1);
+	  $track = substr($track, 0, $pos);
+	}
 
 	$self->title  (	$info->{ title   } );
 	$self->artist (	$info->{ artist  } );
@@ -25,7 +29,7 @@ sub init {
 	$self->genre  (	$info->{ genre   } );
 	$self->year   (	$info->{ year    } );
 	$self->track  (	$track             );
-	$self->total  (	substr($track, $pos + 1) );
+	$self->total  (	$total             );
 
 	if (exists $self->{mp3}->{ID3v2}) {
 	  my $disctag = 0;
