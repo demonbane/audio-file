@@ -1,4 +1,10 @@
 Revision history for Perl extension Audio::File.
+0.12  Sun May 24 17:19:10 PDT 2009
+	- Adding support MP4 files
+	- Adding support for disc number tags
+	- Fixing handling of track numbers without /
+
+--- Forked changes begin here ---
 
 0.11  Fri Aug 25 15:21:22 2006
 	- Fix a test failure in the mp3 tag tests.
