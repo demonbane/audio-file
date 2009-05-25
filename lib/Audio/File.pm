@@ -3,7 +3,7 @@ package Audio::File;
 use strict;
 use warnings;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 =head1 NAME
 
@@ -23,11 +23,16 @@ Audio::File - Audio file abstraction library
 =head1 DESCRIPTION
 
 Audio::File abstracts a single audio file, independant of its format. Using this
-module you can access a files meta-info like title, album, etc. as well as the
-files audio-properties like its length and bitrate.
+module you can access a file’s meta-info like title, album, etc. as well as the
+file’s audio properties like its length and bitrate.
 
-Currently only the formats flac, ogg vorbis and mp3 are supported, but support
-for other formats may be easily added.
+Currently supported formats are:
+  FLAC
+  Ogg Vorbis
+  MP3
+  MP4
+
+Support for other formats may be easily added.
 
 =head1 METHODS
 
@@ -95,13 +100,15 @@ That could be done via Audio::Data or equivalent.
 
 L<Audio::File::Type>, L<Audio::File::Tag>, L<Audio::File::AudioProperties>
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Florian Ragwitz <flora@cpan.org>
+Alex Malinovich <demonbane@the-love-shack.net>
 
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (C) 2004 Florian Ragwitz
+Copyright (C) 2009 Alex Malinovich
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
