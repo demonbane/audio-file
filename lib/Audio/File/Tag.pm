@@ -190,7 +190,8 @@ sub total {
 		$self->{total} = shift;
 		return 1;
 	}
-	my $total = $self->{total};
+	my $total = 0;
+	$total = $self->{total} if ($self->{total});
 	$total = 0 unless $total =~ /^[[:digit:]]+$/;
 	return $total + 0;
 }
