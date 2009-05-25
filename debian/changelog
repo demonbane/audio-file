@@ -1,0 +1,48 @@
+libaudio-file-perl (0.11-2) unstable; urgency=low
+
+  * Take over for the Debian Perl Group with maintainer's permission
+    (http://lists.debian.org/debian-perl/2008/06/msg00039.html)
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Changed:
+    Maintainer set to Debian Perl Group <pkg-perl-
+    maintainers@lists.alioth.debian.org> (was: Florian Ragwitz
+    <rafl@debian.org>); Florian Ragwitz <rafl@debian.org> moved to
+    Uploaders. Added: ${misc:Depends} to Depends: field.
+  * Add debian/watch.
+
+  * Make (build) dependency on libogg-vorbis-header-pureperl-perl versioned;
+    thanks to Daniel Schepler for the bug report (closes: #521966).
+  * Add /me to Uploaders.
+  * Set Standards-Version to 3.8.1 (no changes).
+  * Set debhelper compatibility level to 7; adapt
+    debian/{control,compat,rules}.
+  * debian/copyright: update formatting.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 02 Apr 2009 00:06:23 +0200
+
+libaudio-file-perl (0.11-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Conditionally rmdir /usr/lib/perl5 (closes: #467668)
+
+ -- Stephen Gran <sgran@debian.org>  Sat, 05 Apr 2008 13:05:23 +0100
+
+libaudio-file-perl (0.11-1) unstable; urgency=low
+
+  * New upstream release.
+  * Uses Audio::FLAC::Header instead of Audio::FLAC
+    (Closes: #383709, #378870).
+  * Use DH_COMPAT 5.
+  * Update Standards-Version to 3.7.2 (no changes).
+  * Clean up debian/rules.
+  * Use my new mail address in the Maintainer field.
+  * Fixed build dependencies to make the full test suite pass.
+
+ -- Florian Ragwitz <rafl@debian.org>  Fri, 25 Aug 2006 15:33:23 +0200
+
+libaudio-file-perl (0.08-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Florian Ragwitz <florian@mookooh.org>  Wed, 15 Sep 2004 06:25:15 +0200
+

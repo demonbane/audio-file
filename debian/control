@@ -1,0 +1,26 @@
+Source: libaudio-file-perl
+Section: perl
+Priority: optional
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Florian Ragwitz <rafl@debian.org>,
+ gregor herrmann <gregoa@debian.org>
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: perl, libaudio-flac-header-perl,
+ libogg-vorbis-header-pureperl-perl (>= 1.0-2), libmp3-tag-perl,
+ libmp3-info-perl
+Standards-Version: 3.8.1
+Homepage: http://search.cpan.org/dist/Audio-File/
+Vcs-Svn: svn://svn.debian.org/pkg-perl/trunk/libaudio-file-perl/
+Vcs-Browser: http://svn.debian.org/viewsvn/pkg-perl/trunk/libaudio-file-perl/
+
+Package: libaudio-file-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}, libaudio-flac-header-perl,
+ libogg-vorbis-header-pureperl-perl (>= 1.0-2), libmp3-tag-perl, libmp3-info-perl
+Description: Perl audio file abstraction library
+ Audio::File abstracts a single audio file, independent of its format.
+ Using this module you can access a files meta-info like title, album,
+ etc. as well as the files audio-properties like its length and bitrate.
+ .
+ Currently only the formats flac, ogg vorbis and mp3 are supported, but
+ support for other formats may be easily added.
