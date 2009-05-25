@@ -1,3 +1,10 @@
+libaudio-file-perl (0.12) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Packaging up forked version of libaudio-file-perl
+
+ -- Alex Malinovich <demonbane@the-love-shack.net>  Thu, 17 Dec 2009 01:00:43 -0800
+
 libaudio-file-perl (0.11-2) unstable; urgency=low
 
   * Take over for the Debian Perl Group with maintainer's permission
