@@ -1,11 +1,13 @@
 Format-Specification:
     http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=196
-Upstream-Maintainer: Florian Ragwitz <flora@cpan.org>
-Upstream-Source: http://search.cpan.org/dist/Audio-File/
+Upstream-Maintainer: Alex Malinovich <demonbane@the-love-shack.net>
+Upstream-Source: http://github.com/demonbane/audio-file
 Upstream-Name: Audio-File
 
 Files: *
-Copyright: Florian Ragwitz <flora@cpan.org>
+Copyright:
+ Florian Ragwitz <flora@cpan.org>
+ Alex Malinovich <demonbane@the-love-shack.net>
 License: GPL-2+
 
 Files: debian/*
