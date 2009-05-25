@@ -191,7 +191,7 @@ sub total {
 		return 1;
 	}
 	my $total = $self->{total};
-	$total = 0 if $total eq "";
+	$total = 0 unless $total =~ /^[[:digit:]]+$/;
 	return $total + 0;
 }
 
