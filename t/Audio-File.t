@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-use Test::More tests => 49;
+use Test::More tests => 68;
 
 BEGIN { use_ok('Audio::File'); }
 
@@ -13,10 +13,11 @@ my $tags = {
 		genre	=> 'Rock',
 		year	=> 2005,
 		track	=> 2,
-		total	=> 3
+		total	=> 3,
+		disc	=> 2
 	}
 };
-$tags->{Mp3} = $tags->{Ogg} = $tags->{Flac};
+$tags->{Mp4} = $tags->{Mp3} = $tags->{Ogg} = $tags->{Flac};
 
 my $audio_properties = {
 	Flac	=> {
@@ -36,6 +37,11 @@ my $audio_properties = {
 		bitrate		=> 8,
 		sample_rate	=> 8000,
 		channels	=> 1
+	},
+	Mp4		=> {
+		length		=> 4,
+		bitrate		=> 12,
+		sample_rate	=> 8000,
 	}
 };
 
